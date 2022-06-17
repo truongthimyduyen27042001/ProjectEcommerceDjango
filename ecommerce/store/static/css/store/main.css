@@ -1,0 +1,106 @@
+body {
+    background-color: blue;
+}
+p {
+    margin-bottom: 0px!important;
+}
+a {
+    text-decoration: none;
+}
+.container {
+    max-width: 1200px!important;
+}
+.nav__left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav-brand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 30px;
+}
+.brand-name {
+    color: white;
+    font-size: 20px;
+    margin: 0px!important;
+}
+.nav-search form input {
+    border-radius: 0.25rem 0rem 0rem 0.25rem;
+}
+.nav-search form button {
+    border-radius: 0rem 0.25rem 0.25rem 0rem;
+    border-color: white;
+    height: fit-content;
+}
+.list-items {
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+    padding-left: 20px!important;
+}
+.list-items .item {
+    margin-right: 10px;
+}
+.list-items .item a {
+    color: #fff;
+}
+.nav_right .cart_sum i{
+    color: #fff;
+}
+.cart_sum {
+    position: relative;
+    margin-right: 30px;
+    cursor: pointer;
+}
+.count_amount {
+    position: absolute;
+    padding: 2px 10px;
+    border-radius: 50%;
+    background-color: rgb(215, 147, 147);
+    color: #fff;
+    right: -20px;
+    top: -15px;
+}
+.welcome_user {
+    color: #fff;
+    margin-right: 30px;
+}
+.logout i{
+    color: #fff;
+}
+.main {
+    margin-top: 30px;
+}
+.logout {
+    cursor: pointer;
+}
+.item a{
+    font-size: 17px;
+    font-weight: 400;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none!important;
+}
+.item a:hover {
+    text-decoration: none!important;
+}
+.item-active a {
+    color: black!important;
+    font-weight: 600!important;
+}
+.btn-border-none {
+    border: none!important;
+}
+.btn-border-none a {
+    color: #fff;
+}
+.btn-border-none:hover {
+    background-color: inherit!important;
+}
+.btn-border-none:hover a{
+    color: #fff!important;
+    text-decoration: none!important;
+}

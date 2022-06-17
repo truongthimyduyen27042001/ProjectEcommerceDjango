@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% extends "store/main.html" %}
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    {% load static %}
+  </head>
+  <body>
+    {% block content %}
+    <div class="main">
+      <div class="store-search">
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search your item" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+      <div
+        class="tab-pane grid_view fade show active"
+        id="large"
+        role="tabpanel"
+      >
+        <div class="row">
+          {% for product in products %}
+          <div class="col-lg-4 col-md-6 col-12">
+            <div class="single_product 24297214935104">
+              <div class="product_thumb" style="height: 250px">
+                <a
+                  href="/collections/all/products/1-new-and-sale-badge-product"
+                >
+                  <img
+                    width="100%"
+                    height="100%"
+                    style="object-fit: contain;"
+                    class="popup_cart_image"
+                    src="{{product.image.url}}"
+                    alt="1. New and sale badge product"
+                  />
+                </a>
+                <div class="product_sale percent-count">
+                  <span>- {% widthratio product.discount 1 100 %} %</span>
+                </div>
+              </div>
+              <div class="product_content">
+                <h3 class="popup_cart_title">
+                  <a
+                    href="/collections/all/products/1-new-and-sale-badge-product"
+                    style="color: black"
+                    >{{product.name}}</a
+                  >
+                </h3>
+
+                <div class="product_price">
+                  <span class="current_price"
+                    ><span class="money" data-currency-usd="$110.00"
+                      >{{product.price}}</span
+                    ></span
+                  >
+
+                  <span class="old_price"
+                    ><span class="money" data-currency-usd="$130.00"
+                      >$130.00</span
+                    ></span
+                  >
+                </div>
+                <div class="product_control d-flex">
+                  <div class="product_control_buy"><button type="button" data-product={{product.id}} data-action="add" class="btn btn-outline-primary update-cart" >ADD TO CARD</button></div>
+                  <div class="product_control_view"><button type="button" class="btn btn-outline-primary"><a href="{% url 'store:detail' product.id %}"><i class="fa-solid fa-eye"></i></button></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    {% endblock content %}
+  </body>
+</html>

@@ -1,0 +1,446 @@
+
+  <!DOCTYPE html>
+  <html lang="en">
+
+  <head>
+    {% extends "store/main.html" %}
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css"
+                href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+              <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js">
+              </script>
+
+              <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css"
+                href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+              <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css"
+                href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    {% load static %}
+  </head>
+
+  <body>
+    {% block content %}
+    <div class="main">
+      <div class="detail-container">
+        <section class="product f-left w_100" itemscope="" itemtype="https://schema.org/Product">
+          <div class="container margin-bottom-40">
+            <div class="row">
+              <div class="section wrap-padding-15 d-flex">
+                <!-- detail product -->
+                <div class="details-product col-lg-9 col-md-9 col-sm-12 col-xs-12" style="width: 100%;;">
+                  <div class="row d-flex">
+                    <div class="product-detail-left col-lx-12 col-md-6 col-lg-6">
+                      <div class="col-large-default large-image d-flex justify-content-center align-item-center">
+                        <img src="{{product.image.url}}" style="width: 100%" alt="">
+                      </div>
+                    </div>
+                    <div class="product-detail-left product-detail-infor col-lx-12 col-md-6 col-lg-6">
+                      <div class="col-large-default small-image small-info">
+                        <ul class="list-image-pro pl-0">
+                          <li class="item-image-pro"><img src="{% static 'images/shoes-icon.png' %}" alt="hinhanh"></li>
+                          <li class="item-image-pro"><img src="{% static 'images/shoes-icon.png' %}" alt="hinhanh"></li>
+                          <li class="item-image-pro"><img src="{% static 'images/shoes-icon.png' %}" alt="hinhanh"></li>
+                          <li class="item-image-pro"><img src="{% static 'images/shoes-icon.png' %}" alt="hinhanh"></li>
+                        </ul>
+                      </div>
+                      <h1 class="title-product"><i class="fa fa-cut"></i>{{product.name}}</h1>
+                      <div class="fw w_100" itemprop="offers" itemscope="" itemtype="https://schema.org/Offer">
+                        <div class="group-status">
+                          <span class="first_status">Mặt hàng: <span class="status_name">{{product.category}}</span></span>
+                          <span class="first_status status_2"> <span class="line_tt">|</span> Kho:
+
+                            <span class="status_name availabel hasvariant">
+                              <link itemprop="availability" href="http://schema.org/InStock">Còn hàng
+                            </span>
+
+                          </span>
+                        </div>
+                        <div>
+                          SKU: <span class="sku">VN0A5HAIBLK-S</span>
+                        </div>
+                        <div>
+                          Barcode: <span class="barcode">VN0A5HAIBLK-S</span>
+                        </div>
+
+                        <div class="price-box">
+
+                          <span class="special-price"><span class="price product-price">800,000₫</span>
+                            <meta itemprop="price" content="800,000₫">
+                            <meta itemprop="priceCurrency" content="VND">
+                          </span> <!-- Giá Khuyến mại -->
+                          <span class="old-price" itemprop="priceSpecification" itemscope=""
+                            itemtype="https://schema.org/priceSpecification">
+                            <del class="price product-price-old" style="display: none;">
+
+                            </del>
+                            <meta itemprop="price" content="0₫">
+                            <meta itemprop="priceCurrency" content="VND">
+                          </span> <!-- Giá gốc -->
+
+                        </div>
+                        <div class="promotion-bar">
+                          <div class="promotion-title">
+                            <h6>Khuyến Mãi</h6>
+                          </div>
+                        </div>
+                        <div class="form-product col-sm-12">
+                          <form action="" id="add-to-cart">
+                            <div class=" swatch clearfix d-flex" data-option-index="0">
+                              <div class="header" style="width: 100px">Size: </div>
+                              <div data-value="36" class="swatch-element 36 available">
+                                <input id="swatch-0-36" type="radio" name="option-0" value="36" checked="True">
+                                <label for="swatch-0-36">
+                                  S
+                                </label>
+                              </div>
+                              <div data-value="36" class="swatch-element 36 available">
+                                <input id="swatch-0-36" type="radio" name="option-0" value="36" checked="True">
+                                <label for="swatch-0-36">
+                                  M
+                                </label>
+                              </div>
+                              <div data-value="36" class="swatch-element 36 available">
+                                <input id="swatch-0-36" type="radio" name="option-0" value="36" checked="True">
+                                <label for="swatch-0-36">
+                                  L
+                                </label>
+                              </div>
+                            </div>
+                            <div class=" swatch clearfix d-flex" data-option-index="0">
+                              <div class="header" style="width: 100px">Chất liệu: </div>
+                              <div data-value="36" class="swatch-element 36 available">
+                                Vải nỉ
+                              </div>
+                            </div>
+                            <div class=" swatch clearfix d-flex" data-option-index="0">
+                              <div class="header" style="width: 125px">Thương hiệu: </div>
+                              <div data-value="36" class="swatch-element 36 available">
+                                Converser
+                              </div>
+                            </div>
+                            <div class="form_product_content quy">
+                              <div class="swatch soluong show d-flex">
+                                <div class="label_sl margin-bottom-5">Số lượng:</div>
+                                <div class="custom input_number_product custom-btn-number form-control">									
+                                  <button class="btn_num num_1 button button_qty" onclick="var result = document.getElementById('qtym'); var qtypro = result.value; if( !isNaN( qtypro ) &amp;&amp; qtypro > 1 ) result.value--;return false;" type="button"><i class="fa fa-minus"></i></button>
+                                  <input type="text" id="qtym" name="quantity" value="1" class="form-control prd_quantity" onkeypress="if ( isNaN(this.value + String.fromCharCode(event.keyCode) )) return false;" onchange="if(this.value == 0)this.value=1;">
+                                  <button class="btn_num num_2 button button_qty" onclick="var result = document.getElementById('qtym'); var qtypro = result.value; if( !isNaN( qtypro )) result.value++;return false;" type="button"><i class="fa fa-plus"></i></button>
+                                </div>
+                              </div>
+                              <div class="button_actions clearfix">	        
+                                <button type="button" id="add-to-cart" class="btn btn_base btn_add_cart btn-cart add_to_cart  " name="add"> 
+                                  <span class="text_1">	Thêm vào giỏ </span>
+                                </button>
+                                <button type="button" id="add-to-cart" class="btn btn_base btn_add_cart btn-cart add_to_cart  " name="add"> 
+                                  <span class="text_1">Trang chủ</span>
+                                </button>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- end detail product -->
+                <!-- detail introduce product  -->
+                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12" style="width: 100%;">
+                    <div class="section section_product_banner">
+                      <div class="wrap_bg_ins">
+                        <div class="aside_title"><h2 class="mt-0">SẢN PHẨM MỚI VỀ</h2></div>
+                      </div>
+                      <div class="row">
+                        <div class="col-new-products-group col-lg-12 col-md-12 col-sm-12">
+                          <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                              <div class="item-product-main itemcustome">
+                                <div class="item-product-box product-main-list-mini d-flex">
+                                  <div class="product-thumbnail">
+                                    <a class="image_thumb p_img" href="/products/vo-vans-classic-check-canoodle-6-5-10-1pk-1" title="Vớ Vans  CLASSIC CHECK CANOODLE 6.5-10 1PK">
+                                      <img src="//theme.hstatic.net/200000265619/1000860341/14/800x800.png?v=287" data-lazyload="//product.hstatic.net/200000265619/product/vn0a5l6vj0z-web1_b7ddce82fd8b4569b1e741e1dad1ca52_medium.jpg" alt="Vớ Vans  CLASSIC CHECK CANOODLE 6.5-10 1PK">
+                                    </a>
+                                  </div>
+                                <div class="product-info product-bottom">
+                                  <h3 class="product-name"><a href="/products/vo-vans-classic-check-canoodle-6-5-10-1pk-1" title="Vớ Vans  CLASSIC CHECK CANOODLE 6.5-10 1PK">Vớ Vans  CLASSIC CHECK CANOODLE 6.5-10 1PK</a></h3>
+                                  <div class="blockprice">
+                                    <div class="product-item-price price-box">
+                                      <span class="special-price">
+                                        <span class="price product-price">130,000₫</span>
+                                      </span>                                      
+                                    </div>
+                                  </div>
+                              
+                              
+                                </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                              <div class="item-product-main itemcustome">
+                                <div class="item-product-box product-main-list-mini d-flex">
+                                  <div class="product-thumbnail">
+                                    <a class="image_thumb p_img" href="/products/vo-vans-classic-check-canoodle-6-5-10-1pk-1" title="Vớ Vans  CLASSIC CHECK CANOODLE 6.5-10 1PK">
+                                      <img src="//theme.hstatic.net/200000265619/1000860341/14/800x800.png?v=287" data-lazyload="//product.hstatic.net/200000265619/product/vn0a5l6vj0z-web1_b7ddce82fd8b4569b1e741e1dad1ca52_medium.jpg" alt="Vớ Vans  CLASSIC CHECK CANOODLE 6.5-10 1PK">
+                                    </a>
+                                  </div>
+                                <div class="product-info product-bottom">
+                                  <h3 class="product-name"><a href="/products/vo-vans-classic-check-canoodle-6-5-10-1pk-1" title="Vớ Vans  CLASSIC CHECK CANOODLE 6.5-10 1PK">Vớ Vans  CLASSIC CHECK CANOODLE 6.5-10 1PK</a></h3>
+                                  <div class="blockprice">
+                                    <div class="product-item-price price-box">
+                                      <span class="special-price">
+                                        <span class="price product-price">130,000₫</span>
+                                      </span>                                      
+                                    </div>
+                                  </div>
+                              
+                              
+                                </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                              <div class="item-product-main itemcustome">
+                                <div class="item-product-box product-main-list-mini d-flex">
+                                  <div class="product-thumbnail">
+                                    <a class="image_thumb p_img" href="/products/vo-vans-classic-check-canoodle-6-5-10-1pk-1" title="Vớ Vans  CLASSIC CHECK CANOODLE 6.5-10 1PK">
+                                      <img src="//theme.hstatic.net/200000265619/1000860341/14/800x800.png?v=287" data-lazyload="//product.hstatic.net/200000265619/product/vn0a5l6vj0z-web1_b7ddce82fd8b4569b1e741e1dad1ca52_medium.jpg" alt="Vớ Vans  CLASSIC CHECK CANOODLE 6.5-10 1PK">
+                                    </a>
+                                  </div>
+                                <div class="product-info product-bottom">
+                                  <h3 class="product-name"><a href="/products/vo-vans-classic-check-canoodle-6-5-10-1pk-1" title="Vớ Vans  CLASSIC CHECK CANOODLE 6.5-10 1PK">Vớ Vans  CLASSIC CHECK CANOODLE 6.5-10 1PK</a></h3>
+                                  <div class="blockprice">
+                                    <div class="product-item-price price-box">
+                                      <span class="special-price">
+                                        <span class="price product-price">130,000₫</span>
+                                      </span>                                      
+                                    </div>
+                                  </div>
+                              
+                              
+                                </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                              <div class="item-product-main itemcustome">
+                                <div class="item-product-box product-main-list-mini d-flex">
+                                  <div class="product-thumbnail">
+                                    <a class="image_thumb p_img" href="/products/vo-vans-classic-check-canoodle-6-5-10-1pk-1" title="Vớ Vans  CLASSIC CHECK CANOODLE 6.5-10 1PK">
+                                      <img src="//theme.hstatic.net/200000265619/1000860341/14/800x800.png?v=287" data-lazyload="//product.hstatic.net/200000265619/product/vn0a5l6vj0z-web1_b7ddce82fd8b4569b1e741e1dad1ca52_medium.jpg" alt="Vớ Vans  CLASSIC CHECK CANOODLE 6.5-10 1PK">
+                                    </a>
+                                  </div>
+                                <div class="product-info product-bottom">
+                                  <h3 class="product-name"><a href="/products/vo-vans-classic-check-canoodle-6-5-10-1pk-1" title="Vớ Vans  CLASSIC CHECK CANOODLE 6.5-10 1PK">Vớ Vans  CLASSIC CHECK CANOODLE 6.5-10 1PK</a></h3>
+                                  <div class="blockprice">
+                                    <div class="product-item-price price-box">
+                                      <span class="special-price">
+                                        <span class="price product-price">130,000₫</span>
+                                      </span>                                      
+                                    </div>
+                                  </div>
+                              
+                              
+                                </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                              <div class="item-product-main itemcustome">
+                                <div class="item-product-box product-main-list-mini d-flex">
+                                  <div class="product-thumbnail">
+                                    <a class="image_thumb p_img" href="/products/vo-vans-classic-check-canoodle-6-5-10-1pk-1" title="Vớ Vans  CLASSIC CHECK CANOODLE 6.5-10 1PK">
+                                      <img src="//theme.hstatic.net/200000265619/1000860341/14/800x800.png?v=287" data-lazyload="//product.hstatic.net/200000265619/product/vn0a5l6vj0z-web1_b7ddce82fd8b4569b1e741e1dad1ca52_medium.jpg" alt="Vớ Vans  CLASSIC CHECK CANOODLE 6.5-10 1PK">
+                                    </a>
+                                  </div>
+                                <div class="product-info product-bottom">
+                                  <h3 class="product-name"><a href="/products/vo-vans-classic-check-canoodle-6-5-10-1pk-1" title="Vớ Vans  CLASSIC CHECK CANOODLE 6.5-10 1PK">Vớ Vans  CLASSIC CHECK CANOODLE 6.5-10 1PK</a></h3>
+                                  <div class="blockprice">
+                                    <div class="product-item-price price-box">
+                                      <span class="special-price">
+                                        <span class="price product-price">130,000₫</span>
+                                      </span>                                      
+                                    </div>
+                                  </div>
+                              
+                              
+                                </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                              <div class="item-product-main itemcustome">
+                                <div class="item-product-box product-main-list-mini d-flex">
+                                  <div class="product-thumbnail">
+                                    <a class="image_thumb p_img" href="/products/vo-vans-classic-check-canoodle-6-5-10-1pk-1" title="Vớ Vans  CLASSIC CHECK CANOODLE 6.5-10 1PK">
+                                      <img src="//theme.hstatic.net/200000265619/1000860341/14/800x800.png?v=287" data-lazyload="//product.hstatic.net/200000265619/product/vn0a5l6vj0z-web1_b7ddce82fd8b4569b1e741e1dad1ca52_medium.jpg" alt="Vớ Vans  CLASSIC CHECK CANOODLE 6.5-10 1PK">
+                                    </a>
+                                  </div>
+                                <div class="product-info product-bottom">
+                                  <h3 class="product-name"><a href="/products/vo-vans-classic-check-canoodle-6-5-10-1pk-1" title="Vớ Vans  CLASSIC CHECK CANOODLE 6.5-10 1PK">Vớ Vans  CLASSIC CHECK CANOODLE 6.5-10 1PK</a></h3>
+                                  <div class="blockprice">
+                                    <div class="product-item-price price-box">
+                                      <span class="special-price">
+                                        <span class="price product-price">130,000₫</span>
+                                      </span>                                      
+                                    </div>
+                                  </div>
+                              
+                              
+                                </div>
+                                </div>
+                              </div>
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <!-- end detail introduce product -->
+              </div>
+
+              
+
+              <div
+                class="col-lg-12 col-md-12 col-sm-12 col-xs-12 related-product margin-top-20 xs-margin-top-15 margin-bottom-30">
+                <div class="wrap_bg_in productSeen">
+                  <div class="productSeen-content">
+                    <h2>Sản phẩm tương tự</h2>
+                  </div>
+                  <div class="row list-product-feature">
+                    <div class="col-3 col-lg-3 col-md-3 col-sm-3">
+                      <div class="product-seen">
+                        <div class="item-product-main">
+                          <div class="item-product-box">
+                            <div class="product-img product-thumbnail">
+                              <a href="">
+                                <img src="//product.hstatic.net/200000265619/product/6025220121-web-thumb_f8a11803f6f84a0583848a27576a4d07_large.jpg" alt="">
+                              </a>
+                            </div>
+                            <div class="product-item-info text-center product-info product-bottom mh">
+                              <div class="product-title product-name">
+                                <a href="/products/ao-vans-ap-yin-yang-ss-tee" class="product-item-title " tabindex="0">Áo Vans AP YIN YANG SS TEE</a>
+                              </div>
+                              <div class="c-x-q-t d-flex product-title product-price">
+                                <div class="product-price clearfix ">
+                                  <span class="current-price special-price special-price">800,000₫</span>
+                                  <span class="original-price"></span>
+          
+                                </div>
+                                <div class="a-d-t-le product-title product-btn-detail">
+                                  <a href="/products/ao-vans-ap-yin-yang-ss-tee" class="a_url hidden-xs hidden-sm hidden-md" title="Chi tiết" tabindex="0">
+                                    Chi tiết
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-3 col-lg-3 col-md-3 col-sm-3">
+                      <div class="product-seen">
+                        <div class="item-product-main">
+                          <div class="item-product-box">
+                            <div class="product-img product-thumbnail">
+                              <a href="">
+                                <img src="//product.hstatic.net/200000265619/product/6025220121-web-thumb_f8a11803f6f84a0583848a27576a4d07_large.jpg" alt="">
+                              </a>
+                            </div>
+                            <div class="product-item-info text-center product-info product-bottom mh">
+                              <div class="product-title product-name">
+                                <a href="/products/ao-vans-ap-yin-yang-ss-tee" class="product-item-title " tabindex="0">Áo Vans AP YIN YANG SS TEE</a>
+                              </div>
+                              <div class="c-x-q-t d-flex product-title product-price">
+                                <div class="product-price clearfix ">
+                                  <span class="current-price special-price special-price">800,000₫</span>
+                                  <span class="original-price"></span>
+          
+                                </div>
+                                <div class="a-d-t-le product-title product-btn-detail">
+                                  <a href="/products/ao-vans-ap-yin-yang-ss-tee" class="a_url hidden-xs hidden-sm hidden-md" title="Chi tiết" tabindex="0">
+                                    Chi tiết
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-3 col-lg-3 col-md-3 col-sm-3">
+                      <div class="product-seen">
+                        <div class="item-product-main">
+                          <div class="item-product-box">
+                            <div class="product-img product-thumbnail">
+                              <a href="">
+                                <img src="//product.hstatic.net/200000265619/product/6025220121-web-thumb_f8a11803f6f84a0583848a27576a4d07_large.jpg" alt="">
+                              </a>
+                            </div>
+                            <div class="product-item-info text-center product-info product-bottom mh">
+                              <div class="product-title product-name">
+                                <a href="/products/ao-vans-ap-yin-yang-ss-tee" class="product-item-title " tabindex="0">Áo Vans AP YIN YANG SS TEE</a>
+                              </div>
+                              <div class="c-x-q-t d-flex product-title product-price">
+                                <div class="product-price clearfix ">
+                                  <span class="current-price special-price special-price">800,000₫</span>
+                                  <span class="original-price"></span>
+          
+                                </div>
+                                <div class="a-d-t-le product-title product-btn-detail">
+                                  <a href="/products/ao-vans-ap-yin-yang-ss-tee" class="a_url hidden-xs hidden-sm hidden-md" title="Chi tiết" tabindex="0">
+                                    Chi tiết
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-3 col-lg-3 col-md-3 col-sm-3">
+                      <div class="product-seen">
+                        <div class="item-product-main">
+                          <div class="item-product-box">
+                            <div class="product-img product-thumbnail">
+                              <a href="">
+                                <img src="//product.hstatic.net/200000265619/product/6025220121-web-thumb_f8a11803f6f84a0583848a27576a4d07_large.jpg" alt="">
+                              </a>
+                            </div>
+                            <div class="product-item-info text-center product-info product-bottom mh">
+                              <div class="product-title product-name">
+                                <a href="/products/ao-vans-ap-yin-yang-ss-tee" class="product-item-title " tabindex="0">Áo Vans AP YIN YANG SS TEE</a>
+                              </div>
+                              <div class="c-x-q-t d-flex product-title product-price">
+                                <div class="product-price clearfix ">
+                                  <span class="current-price special-price special-price">800,000₫</span>
+                                  <span class="original-price"></span>
+          
+                                </div>
+                                <div class="a-d-t-le product-title product-btn-detail">
+                                  <a href="/products/ao-vans-ap-yin-yang-ss-tee" class="a_url hidden-xs hidden-sm hidden-md" title="Chi tiết" tabindex="0">
+                                    Chi tiết
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      {% endblock content %}
+  </body>
+
+  </html>

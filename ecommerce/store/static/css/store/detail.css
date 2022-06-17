@@ -1,0 +1,451 @@
+.detail-container {
+  font-size: 14px;
+  color: #000000;
+  line-height: 1.7;
+  font-family: "Montserrat", "HelveticaNeue", "Helvetica Neue", sans-serif;
+}
+.details-product .large-image {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 20px;
+  height: 430px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 1px #ebebeb;
+}
+
+.detail-container a {
+  color: #000000;
+  text-decoration: none;
+  background: transparent;
+}
+.list-image-pro {
+  list-style: none !important;
+  transform: translate3d(0px, 0px, 0px);
+  transition: all 0.25s ease 0s;
+  display: flex;
+}
+.list-image-pro li {
+  width: 67.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border: solid 1px #ebebeb;
+  margin-right: 10px;
+  cursor: pointer;
+  padding: 5px;
+}
+.list-image-pro li img {
+  width: auto;
+  margin: 0 auto;
+  max-height: 100%;
+  max-width: 100%;
+}
+.detail-container .title-product {
+  color: #000000;
+  font-size: 20px;
+  line-height: 28px;
+  font-family: "Montserrat", "HelveticaNeue", "Helvetica Neue", sans-serif;
+  margin: 0px;
+  margin-bottom: 10px;
+  font-weight: 700;
+  border-top: dashed 1px #ff0000;
+  position: relative;
+  padding-left: 0px;
+  padding-top: 5px;
+}
+.title-product .fa {
+  color: #ff0000;
+  position: absolute;
+  left: -12px;
+  top: -12px;
+}
+.w_100 {
+  width: 100%;
+}
+.detail-container .product-detail-left .group-status {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+.product-detail-left .group-status .status_name {
+  color: #d0021b;
+}
+.product-detail-left .group-status .first_status .line_tt {
+  padding: 0 5px;
+}
+.details-product .product-detail-left .price-box {
+  margin: 8px 0 10px;
+}
+.details-product .product-detail-left .product-price {
+  font-size: 30px;
+  line-height: 30px;
+  font-family: "Montserrat", "HelveticaNeue", "Helvetica Neue", sans-serif;
+  display: inline-block;
+  color: #d0021b;
+  font-weight: 700;
+}
+.details-product .details-pro .price-box del {
+  color: #8d90a6;
+  font-size: 14px;
+  margin-left: 10px;
+  font-family: "Montserrat", "HelveticaNeue", "Helvetica Neue", sans-serif;
+}
+.promotion-bar .promotion-title h6 {
+  font-weight: normal;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  line-height: 1.75;
+}
+.promotion-bar .promotion-tag-item {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.form-product {
+  padding: 0px !important;
+}
+.form-product .swatch {
+  margin: 15px 0px;
+}
+.form-product .swatch .header {
+  margin: 0px 0px 0px;
+  text-align: left;
+  font-weight: 700;
+  font-size: 16px;
+  color: #000000;
+  z-index: 0;
+  line-height: 27px;
+}
+.swatch .swatch-element {
+  margin: 0px 10px 5px 0;
+  float: left;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+}
+.form-product .swatch .swatch-element input {
+  left: 0px;
+  height: 32px;
+}
+.form-product .swatch input:checked + label {
+  border: 1px solid #ff2d37;
+  color: #d0021b;
+  font-weight: bold;
+}
+.form-product .swatch label {
+  color: #d0021b;
+  font-weight: bold;
+  min-width: 40px;
+  float: left;
+  margin: 0;
+  border: 1px solid #ff2d37;
+  background-color: #fff;
+  font-size: 14px;
+  font-family: "Montserrat", "HelveticaNeue", "Helvetica Neue", sans-serif;
+  text-align: center;
+  line-height: 30px;
+  white-space: nowrap;
+  text-transform: uppercase;
+  padding: 0;
+  border-radius: 0px;
+  position: relative;
+}
+.form-product input[type="checkbox"],
+input[type="radio"] {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 40px;
+  position: absolute;
+  background: transparent;
+  outline: none;
+  opacity: 0;
+  z-index: 3;
+}
+.swatch .swatch-element input {
+  left: 0px;
+  background: red;
+  height: 32px;
+}
+.swatch input:checked + label {
+  border: 1px solid #ff2d37;
+  color: #d0021b;
+  font-weight: bold;
+}
+.form-product .form_product_content {
+  width: 100%;
+  float: left;
+}
+.show {
+  display: block !important;
+}
+.form-product .form_product_content .label_sl {
+  font-weight: bold;
+  display: inline-block;
+  line-height: 45px;
+  margin-right: 40px;
+}
+.form-product .custom-btn-number {
+  width: 160px;
+  position: relative;
+  padding: 0;
+  margin: 0px !important;
+  border: none;
+  box-shadow: none;
+  height: 45px;
+  display: flex;
+}
+.form-product .input_number_product .btn_num {
+  border: solid 1px #ddd;
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background: #fff;
+  text-align: center;
+  padding: 0px;
+  border-radius: 0;
+  margin-top: 5px;
+}
+.form-product .input_number_product .btn_num.num_1 {
+  font-size: 15px;
+  margin-right: -5px;
+  position: relative;
+  line-height: 27px;
+  color: #000000;
+}
+.form-product .input_number_product input {
+  margin: 0px 5px;
+  margin-top: 5px;
+  display: block;
+  color: #000000;
+  height: 35px;
+  border: 1px solid #ddd;
+  border-right: none;
+  border-left: none;
+  width: 45px;
+  min-height: unset;
+  text-align: center;
+  box-shadow: none;
+  border-radius: 0px;
+  font-size: 14px;
+  font-family: "Montserrat", "HelveticaNeue", "Helvetica Neue", sans-serif;
+}
+.form-product .input_number_product .btn_num.num_2 {
+  font-size: 15px;
+  margin-left: -5px;
+  position: relative;
+  color: #000000;
+}
+.form-product .button_actions {
+  width: 100%;
+  display: inline-block;
+  margin-top: 23px;
+  position: relative;
+}
+.button_actions .btn_base {
+  width: 100%;
+  margin-bottom: 15px;
+  font-size: 14px;
+  outline: none;
+  box-shadow: none;
+  text-transform: uppercase;
+  color: #fff;
+  width: 150px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 50px;
+  background: #000000;
+  font-family: "Montserrat", "HelveticaNeue", "Helvetica Neue", sans-serif;
+  border: 2px solid #4d4d4d;
+  margin-left: 0px;
+  padding: 0;
+  float: left;
+  margin-right: 15px;
+}
+.section_product_banner .aside_title h2 {
+  font-size: 16px;
+  font-weight: lighter;
+  text-transform: capitalize;
+  color: #000000;
+}
+.section_product_banner .itemcustome {
+  border: dashed 1px #ebebeb;
+  margin-bottom: 15px;
+}
+.section_product_banner .item-product-main .product-main-list-mini {
+  padding: 10px;
+  margin-bottom: 0px;
+}
+.section_product_banner
+  .item-product-main
+  .product-main-list-mini
+  .product-thumbnail {
+  width: 85px;
+}
+.section_product_banner
+  .item-product-main
+  .product-main-list-mini
+  .product-thumbnail
+  img {
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+}
+
+.section_product_banner .item-product-main .item-product-box .product-info {
+  width: calc(100% - 85px);
+  padding: 0 0px 0 15px;
+}
+.section_product_banner
+  .item-product-main
+  .item-product-box
+  .product-info
+  .product-name {
+  border: 0px;
+  font-weight: 400;
+  text-align: left;
+  margin: 0 0 10px;
+  overflow: hidden;
+  word-wrap: break-word;
+  line-height: 20px;
+  font-size: 14px;
+  height: 37px;
+  font-family: "Montserrat", "HelveticaNeue", "Helvetica Neue", sans-serif;
+}
+.section_product_banner
+  .item-product-main
+  .item-product-box
+  .product-info
+  .product-item-price
+  span {
+  font-size: 14px;
+  font-family: "Montserrat", "HelveticaNeue", "Helvetica Neue", sans-serif;
+  color: #d0021b;
+  font-weight: 700;
+  line-height: 8px;
+  width: 100%;
+  float: left;
+}
+.productSeen .productSeen-content h2 {
+  text-transform: uppercase;
+  font-size: 16px;
+}
+.list-product-feature .product-seen .item-product-main {
+  border-top: solid 1px #ebebeb;
+  border-right: solid 1px #ebebeb;
+  border-left: solid 1px #ebebeb;
+}
+.list-product-feature .product-seen .item-product-main .product-thumbnail {
+  width: 100%;
+  float: left;
+  position: relative;
+  overflow: hidden;
+}
+.list-product-feature .product-seen .item-product-main .product-thumbnail a {
+  height: 214px;
+}
+.list-product-feature
+  .product-seen
+  .item-product-main
+  .product-thumbnail
+  a
+  img {
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+}
+.list-product-feature
+  .product-seen
+  .item-product-main
+  .product-info
+  .product-bottom {
+  width: 100%;
+  float: left;
+  padding: 10px 0px 0px;
+  position: relative;
+  text-align: left;
+}
+.list-product-feature
+  .product-seen
+  .item-product-main
+  .product-info
+  .product-name {
+    font-family: "Montserrat", "HelveticaNeue", "Helvetica Neue", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0 0 10px;
+    overflow: hidden;
+    word-wrap: break-word;
+    line-height: 20px;
+    text-align: center;
+    height: 37px;
+    padding: 0 10px;
+  }
+  .list-product-feature
+  .product-seen .item_product_main .product-item-main .product-bottom .product-name a {
+    color: #000000;
+    text-decoration: none;
+}
+.c-x-q-t {
+  width: 100%;
+  float: left;
+  padding: 10px 10px 0px;
+  min-height: 45px;
+  position: relative;
+  border-left: solid 1px #ebebeb;
+  border-right: solid 1px #ebebeb;
+  border-bottom: solid 1px #ebebeb;
+  border-top: 1px dashed  #ebebeb!important;
+  justify-content: space-between;
+}
+.c-x-q-t:before {
+  content: "";
+  width: 10px;
+  height: 18px;
+  background: #ffffff;
+  position: absolute;
+  top: -9px;
+  left: -2px;
+  border-radius: 0 18px 18px 0;
+  border-top: solid #ececec 2px;
+  border-right: solid #ececec 1px;
+}
+.c-x-q-t:after {
+  content: "";
+  width: 10px;
+  height: 18px;
+  background: #ffffff;
+  position: absolute;
+  top: -9px;
+  right: -2px;
+  bottom: auto;
+  border-radius: 18px 0 0 18px;
+  border-top: solid #ececec 2px;
+  border-left: solid #ececec 1px;
+}
+.a-d-t-le {
+  margin-bottom: 10px;
+  display: inline-block;
+  margin-right: 10px;
+}
+.list-product-feature .product-seen .item-product-main .product-info .product-price a {
+  padding: 2px 5px;
+  text-align: center;
+  font-size: 14px;
+  font-family: "Montserrat", "HelveticaNeue", "Helvetica Neue", sans-serif;
+  color: #fff;
+  float: left;
+  background: #000000;
+}
+.list-product-feature .product-seen .item-product-main .product-info .product-price .special-price {
+  font-size: 14px;
+  font-family: "Oswald", "HelveticaNeue", "Helvetica Neue", sans-serif;
+  color: #d60000;
+  font-weight: 700;
+  line-height: 8px;
+  width: 100%;
+  float: left;
+}

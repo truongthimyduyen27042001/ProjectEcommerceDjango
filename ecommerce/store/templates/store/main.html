@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/store/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/store/store.css' %}">
+    <link rel="stylesheet" href="{% static 'css/store/cart.css' %}">
+    <link rel="stylesheet" href="{% static 'css/store/detail.css' %}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="{% static 'fontawesomefree/css/all.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/brands.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/solid.css' %}" rel="stylesheet" type="text/css">
+    <link rel="icon" type="image/x-icon" href="{% static 'images/favicon-icon.png' %}">
+
+    </head>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg " style="background-color: #7ecc13">
+        <div class="container-md d-flex">
+            <div class="nav__left d-flex">
+                <div class="nav-brand">
+                    <a class="navbar-brand" href="/" style="display: flex">
+                        <img src="{% static 'images/shoes-icon.png' %}" width="50px" alt="" />
+                    </a>
+                    <h3 class="brand-name">Dunei</h3>
+        
+                </div>
+                <div class="nav-choice">
+                    <div class="nav-search d-flex">
+                        <ul class="list-items d-flex">
+                            <li class="item {% if categoryId == 0 %} item-active {% endif %}"><a href="{% url 'store:storeCategory' 0 %}">All Category</a></li>
+                            <li class="item {% if categoryId == 1 %} item-active {% endif %}"><a href="{% url 'store:storeCategory' 1 %}">Shoes</a></li>
+                            <li class="item {% if categoryId == 2 %} item-active {% endif %}"><a href="{% url 'store:storeCategory' 2 %}">Bag</a></li>
+                            <li class="item {% if categoryId == 3 %} item-active {% endif %}"><a href="{% url 'store:storeCategory' 3 %}">Shirt</a></li>
+                            <li class="item {% if categoryId == 4 %} item-active {% endif %}"><a href="{% url 'store:storeCategory' 4 %}">Skirt</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="nav_right d-flex">
+                {% if not customer %}
+                    <div class="nav_for_nouser">
+                        <button type="button" class="btn btn-outline-secondary btn-border-none mr-3"><a href="{% url 'store:login' %}">Login</a></button>
+                        <button type="button" class="btn btn-outline-secondary btn-border-none"><a href="{% url 'store:register' %}">Register</a></button>
+                    </div>
+                {%else %}
+                <div class="nav_for_user d-flex">
+                    <div class="cart_sum">
+                        <a href="/cart"><i class="fa-solid fa-cart-arrow-down"></i></a>
+                        <div class="count_amount">{{order.get_cart_items}}</div>
+                    </div>
+                    <div class="welcome_user">
+                        <p>Hi, {{customer}}</p>
+                    </div>
+                    <div class="logout">
+                        <a href="{% url 'store:logout' %}"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container">
+        {% block content %}
+        {% endblock content %}
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="{% static 'js/cart.js' %}"></script>
+    <script type="text/javascript">
+        var user = '{{request.user}}'
+        function getToken(name) {
+            let cookieValue = null;
+            if (document.cookie && document.cookie !== '') {
+                const cookies = document.cookie.split(';');
+                for (let i = 0; i < cookies.length; i++) {
+                    const cookie = cookies[i].trim();
+                    // Does this cookie string begin with the name we want?
+                    if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                        break;
+                    }
+                }
+            }
+            return cookieValue;
+        }
+        const csrftoken = getToken('csrftoken');
+    </script>
+    <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+</body>
+</html>

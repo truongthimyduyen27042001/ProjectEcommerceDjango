@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/store/checkout.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      href="{% static 'fontawesomefree/css/all.min.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="{% static 'fontawesomefree/css/fontawesome.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="{% static 'fontawesomefree/css/brands.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="{% static 'fontawesomefree/css/solid.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="checkout-content" data-content="">
+      <div class="wrap">
+        <div class="checkout_main">
+          <header class="main__header" role="banner">
+            <a class="logo logo--left" href="https://m4u-demo.myshopify.com/"
+              ><span class="logo__text heading-1">M4u Demo</span></a
+            >
+            <nav class="page-logo-main" aria-label="Breadcrumb">
+              <ol class="breadcrumb" role="list">
+                <li
+                  class="breadcrumb__item d-flex mr-3 breadcrumb__item--current"
+                  aria-current="step"
+                >
+                  <span class="breadcrumb__text mr-2">Information</span>
+                  <div class="breadcrumb__icon">
+                    <i class="fa-solid fa-angle-right"></i>
+                  </div>
+                </li>
+                <li
+                  class="breadcrumb__item d-flex mr-3 breadcrumb__item--blank"
+                >
+                  <span class="breadcrumb__text mr-2">Shipping</span>
+                  <div class="breadcrumb__icon">
+                    <i class="fa-solid fa-angle-right"></i>
+                  </div>
+                </li>
+                <li class="breadcrumb__item breadcrumb__item--blank">
+                  <span class="breadcrumb__text">Payment</span>
+                </li>
+              </ol>
+            </nav>
+          </header>
+          <main class="main__content" role="main">
+            <div
+              class="step"
+              data-step="contact_information"
+              data-last-step="false"
+            >
+              <div class="section__header">
+                <div
+                  class="seaction__header_infor d-flex justify-content-between"
+                >
+                  <h2 class="section__title" id="main-header" tabindex="-1">
+                    Contact information
+                  </h2>
+
+                  <p class="layout-flex__item">
+                    Already have an account?
+                    <a
+                      href="https://m4u-demo.myshopify.com/account/login?checkout_url=https%3A%2F%2Fm4u-demo.myshopify.com%2F17479434304%2Fcheckouts%2F8964ed9580948cecf5982d0ceac84ebc%3Fkey%3D829474a518d00695a52a60ed0d76da6a%26step%3Dcontact_information"
+                    >
+                      Log in
+                    </a>
+                  </p>
+                </div>
+              </div>
+              <form action="">
+                <div class="row">
+                    <div class="col-6">
+                      <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label"
+                          >Name</label
+                        >
+                        <input
+                          type="email"
+                          class="form-control"
+                          id="exampleFormControlInput1"
+                          placeholder="name@example.com"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label"
+                          >Age</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="exampleFormControlInput1"
+                          placeholder="Insert your age"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label"
+                      >Email</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="exampleFormControlInput1"
+                      placeholder="Insert your email"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label"
+                      >Address</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="exampleFormControlInput1"
+                      placeholder="Insert your address"
+                    />
+                  </div>
+                  
+                  <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label"
+                      >Your City</label
+                    >
+                    <select class="form-select form-control" aria-label="Default select example">
+                        <option selected>Select your city</option>
+                        <option value="1">Da Nang</option>
+                        <option value="2">Ho Chi Minh</option>
+                        <option value="3">Ha Noi</option>
+                      </select>
+                  </div>
+              </form>
+              <div class="step__footer mt-4" data-step-footer="">
+
+                <button type="submit" class="theme-default-button" name="checkout">Continue to shipping</button>                
+            </div>
+            </div>
+          </main>
+          <footer class="main__footer" role="contentinfo">
+            <p class="copyright-text">All rights reserved M4u Demo</p>
+          </footer>
+        </div>
+        <aside class="sidebar" role="complementary">
+          <div class="sidebar__header">
+            <a class="logo logo--left" href="https://m4u-demo.myshopify.com/"
+              ><span class="logo__text heading-1">M4u Demo</span></a
+            >
+          </div>
+          <div class="sidebar__content">
+            <div
+              id="order-summary"
+              class="order-summary order-summary--is-collapsed"
+              data-order-summary=""
+            >
+              <div class="order-summary-info d-flex justify-content-between">
+                <h2 class="mb-4" style="font-size: 20px">Order summary</h2>
+              <h2 class="mb-4" style="font-size: 20px">Total: {{order.get_cart_items}}</h2>
+              </div>
+              <div class="order-summary__sections">
+                <div
+                  class="order-summary__section order-summary__section--product-list order-summary__section--is-scrollable"
+                >
+                  <div
+                    class="order-summary__section__content"
+                    tabindex="0"
+                    aria-labelledby="order-summary__scroll-indicator"
+                  >
+                    <table class="product-table">
+                      <caption class="visually-hidden">
+                        Shopping cart
+                      </caption>
+                      <tbody data-order-summary-section="line-items">
+                        {% for item in items %}
+                        <tr
+                          class="product"
+                          data-product-id="2633746120768"
+                          data-variant-id="24297188098112"
+                          data-product-type="Type 5"
+                          data-customer-ready-visible=""
+                        >
+                          <td class="product__image">
+                            <div class="product-thumbnail">
+                              <div class="product-thumbnail__wrapper">
+                                <img
+                                  alt="5. Simple product"
+                                  class="product-thumbnail__image"
+                                  src="{{item.product.image.url}}"
+                                />
+                              </div>
+                              <span
+                                class="product-thumbnail__quantity"
+                                aria-hidden="true"
+                                >{{item.quantity}}</span
+                              >
+                            </div>
+                          </td>
+                          <td class="product__description" scope="row">
+                            <span
+                              class="product__description__name order-summary__emphasis"
+                              >{{item.product.name}}</span
+                            >
+                            <span
+                              class="product__description__variant order-summary__small-text"
+                            ></span>
+                          </td>
+                          <td class="product__price">
+                            <span
+                              class="order-summary__emphasis skeleton-while-loading"
+                              >{{item.product.price|floatformat:0}} VNĐ</span
+                            >
+                          </td>
+                        </tr>
+                        {% endfor %}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                <div
+                  class="order-summary__section order-summary__section--total-lines"
+                  data-order-summary-section="payment-lines"
+                >
+                  <table class="total-line-table">
+                    <tbody class="total-line-table__tbody">
+                      <tr class="total-line total-line--subtotal">
+                        <th class="total-line__name" scope="row">Subtotal</th>
+                        <td class="total-line__price">
+                          <span
+                            class="order-summary__emphasis skeleton-while-loading"
+                            data-checkout-subtotal-price-target="32000"
+                            >{{order.get_cart_total|floatformat:0}} VNĐ</span
+                          >
+                        </td>
+                      </tr>
+
+                      <tr class="total-line total-line--shipping">
+                        <th class="total-line__name" scope="row">
+                          <span>Shipping</span>
+                        </th>
+                        <td class="total-line__price">
+                          <span
+                            class="skeleton-while-loading order-summary__emphasis"
+                            data-checkout-total-shipping-target="2000"
+                            >20 000 VNĐ</span
+                          >
+                        </td>
+                      </tr>
+
+                      <tr
+                        class="total-line total-line--taxes hidden"
+                        data-checkout-taxes=""
+                      >
+                        <th class="total-line__name" scope="row">Taxes</th>
+                        <td class="total-line__price">
+                          <span
+                            class="order-summary__emphasis skeleton-while-loading"
+                            data-checkout-total-taxes-target="0"
+                            >$0.00</span
+                          >
+                        </td>
+                      </tr>
+                    </tbody>
+                    <tfoot class="total-line-table__footer">
+                      <tr class="total-line">
+                        <th
+                          class="total-line__name payment-due-label"
+                          scope="row"
+                        >
+                          <span class="payment-due-label__total">Total</span>
+                        </th>
+                        <td
+                          class="total-line__price payment-due"
+                          data-presentment-currency="USD"
+                        >
+                          <span
+                            class="payment-due__currency remove-while-loading"
+                            >USD</span
+                          >
+                          <span
+                            class="payment-due__price skeleton-while-loading--lg"
+                            data-checkout-payment-due-target="34000"
+                            >$340.00</span
+                          >
+                        </td>
+                      </tr>
+                    </tfoot>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+</html>

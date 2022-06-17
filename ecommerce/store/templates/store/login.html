@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/store/login.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      href="{% static 'fontawesomefree/css/all.min.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="{% static 'fontawesomefree/css/fontawesome.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="{% static 'fontawesomefree/css/brands.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="{% static 'fontawesomefree/css/solid.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <body>
+    <div class="auth">
+      <div class="preloader">
+        <div class="preloader-icon"></div>
+      </div>
+      <div class="form-wrapper d-flex">
+        <div class="container">
+          <div class="card">
+            <div class="row g-0 m-0">
+              <div class="col">
+                <div class="row">
+                  <div class="col-md-10 offset-md-1">
+                    <div class="d-block d-lg-none text-center text-lg-start">
+                      <img
+                        src="{% static 'images/shoes-icon.png' %}"
+                        width="50px"
+                        alt=""
+                      />
+                    </div>
+                    <div class="my-3 text-left">
+                      <h1 class="display-8">Sign In</h1>
+                      <p class="text-muted">Sign in to DuTu to continue</p>
+                    </div>
+                    <form class="login-form mb-5" action="{% url 'store:login' %}" method="POST">
+                      {% csrf_token %} 
+                      <div class="mb-3">
+                        {{lgForm.username.label}}
+                        {{lgForm.username}}
+                      </div>
+                      <div class="mb-3">
+                        {{lgForm.password.label}}
+                        {{lgForm.password}}
+                      </div>
+                      <div class="text-left text-lg-start">
+                        <p class="small">
+                          Can't access your account?
+                          <a href="#">Reset your password now</a>.
+                        </p>
+                        <button class="btn btn-primary">Sign In</button>
+                      </div>
+                    </form>
+                    <div
+                      class="social-links d-flex flex-column justify-content-center"
+                    >
+                      <a href="#">
+                        <i class="fa-brands fa-google-plus-g bg-google"></i> Sign in with Google
+                      </a>
+                      <a href="#">
+                        <i class="fa-brands fa-facebook-f bg-facebook"></i> Sign in with
+                        Facebook
+                      </a>
+                    </div>
+                    <p class="text-center d-block d-lg-none mt-5 mt-lg-0">
+                      Don't have an account? <a href="#">Sign up</a>.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="col d-none d-lg-flex border-start align-items-center justify-content-between flex-column text-center"
+              >
+                <div class="logo">
+                  <img
+                    src="{% static 'images/shoes-icon.png' %}"
+                    width="100px"
+                    alt=""
+                  />
+                </div>
+                <div>
+                  <h3 class="fw-bold">Welcome to DuTu!</h3>
+                  <p class="lead my-5">
+                    If you don't have an account, would you like to register
+                    right now?
+                  </p>
+                  <a href="{% url 'store:register' %}" class="btn btn-primary">Register Now</a>
+                </div>
+                <ul class="list-inline">
+                  <li class="list-inline-item">
+                    <a href="#">Privacy Policy</a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#">Terms &amp; Conditions</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

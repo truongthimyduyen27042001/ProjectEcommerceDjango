@@ -1,0 +1,144 @@
+.cart-page {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.cart-table table {
+    border-color: #ddd;
+    border-radius: 0;
+    border-style: solid;
+    border-width: 1px 0 0 1px;
+    margin: 0;
+    text-align: center;
+    width: 100%;
+}
+.table-responsive table thead {
+    background: #f2f2f2;
+}
+.cart-table table thead tr th {
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-top: medium none;
+    padding: 10px;
+    text-align: center;
+    text-transform: capitalize;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+.cart-table table tbody tr td.pro-thumbnail {
+    width: 130px;
+}
+.cart-table table tbody tr td {
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    padding: 10px;
+    vertical-align: middle;
+    text-align: center;
+}
+.cart-table table tbody tr td.pro-title {
+    width: 270px;
+}
+.cart-table table tbody tr td.pro-price {
+    width: 130px;
+}
+.cart-table table tbody tr td.pro-quantity {
+    width: 180px;
+}
+.cart-table table tbody tr td.pro-subtotal {
+    width: 120px;
+}
+.cart-table table tbody tr td.pro-remove {
+    width: 150px;
+}
+.cart-table table tbody tr td.pro-title a {
+    display: block;
+    margin-bottom: 6px;
+    color: #4c4c4c;
+}
+.cart-table table tbody tr td.pro-quantity .product-quantity {
+    border: 1px solid #ddd;
+    display: inline-block;
+    padding: 0 30px;
+    position: relative;
+    width: 100px;
+}
+.cart-table table tbody tr td.pro-quantity .product-quantity input {
+    background: transparent none repeat scroll 0 0;
+    border: medium none;
+    height: 38px;
+    padding-left: 0;
+    text-align: center;
+    width: 40px;
+}
+.cart-table table tbody tr td.pro-quantity .product-quantity span {
+    color: #ddd;
+    cursor: pointer;
+    display: block;
+    height: 38px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 29px;
+}
+.cart-table table tbody tr td.pro-quantity .product-quantity span {
+    line-height: 38px;
+}
+.cart-table table tbody tr td.pro-quantity .product-quantity span.dec {
+    left: 0;
+}
+.cart-table table tbody tr td.pro-quantity .product-quantity span.inc {
+    right: 0;
+}
+.cart-buttons {
+    margin-top: 20px;
+}
+.theme-default-button {
+    background-color: #000;
+    border: medium none;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 400;
+    height: 40px;
+    line-height: 24px;
+    margin-bottom: 0;
+    padding: 8px 25px;
+    border-radius: 0;
+    text-align: center;
+}
+.theme-default-button+.theme-default-button {
+    margin-left: 15px;
+}
+.theme-default-button:hover {
+    color: #fff;
+    text-decoration: none!important;
+    background-color: #666;
+}
+.table-responsive table tbody tr td:last-child a {
+    color: #7ecc13;
+    font-size: 30px;
+}
+.cart-payment {
+    margin-top: 50px;
+}
+.cart-total table {
+    border-collapse: collapse;
+    width: 100%;
+}
+.cart-total table tbody tr th {
+    text-align: inherit;
+    padding: 15px;
+    border: 1px solid #e5e5e5;
+}
+.cart-total table tbody tr td{
+    text-align: left;
+    padding: 15px;
+    border: 1px solid #e5e5e5;
+}
+.proceed-to-checkout .theme-default-button {
+    margin-top: 20px;
+}
+.proceed-to-checkout a {
+    text-decoration: none!important;
+    color: #fff!important;
+}
